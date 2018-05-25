@@ -4,26 +4,8 @@
         <h1>MoxiCar</h1>
         <p>La proximité pour tous !</p>
       </div>
-     <div id="Search-bar">
-      <div class="back-input">
-       <select class="inputHome" type="search"  v-model="destination">
-         <option value="" selected disabled hidden>Ex: Meaux</option>
-         <option value="Meaux">Meaux</option>
-         <option value="Val d'europe">Val d'Europe</option>
-         <option value="Torcy">Torcy</option>
-         <option value="La Ferté-sous-Jouarre">La Ferté-sous-Jouarre</option>
-       </select>
-        <br>
-       <select class="inputHome" type="search" placeholder="">
-         <option value="" selected disabled hidden>Ex: Torcy</option>
-         <option value="Meaux">Meaux</option>
-         <option value="Val d'europe">Val d'Europe</option>
-         <option value="Torcy">Torcy</option>
-         <option value="La Ferté-sous-Jouarre">La Ferté-sous-Jouarre</option>
-       </select>
-       <br>
-       <button v-on:click="action()" class="submit-search" type="submit"> s'inscrire !</button>
-        </div>
+      <div id="background">
+
       </div>
      <div id="about">
            <img class="voyageuse" src="../../assets/img/images.jpg" alt="voyageuse attendant son train">
@@ -83,46 +65,13 @@ label{
   font-weight: bolder;
   margin-left: 20px;
 }
-#Search-bar{
+#background{
   width: 100%;
   height:500px;
   background-image: url('../../assets/img/voiture.jpg');
   background-position: center;
   background-size: cover;
 }
-
-.back-input{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top:60%;
-  left:50%;
-  transform: translateX(-50%);
-}
-.inputHome{
-  color:black;
-  width: 200px;
-  padding:4px;
-  border-radius:17px;
-  margin: 5px;
-
-}
-.submit-search{
-background-color: #3d758e;
-color: white;
-padding: 10px;
-width: 100px;
-border: 1px solid #3d758e;
-border-radius: 70px;
-cursor: pointer;
-}
-
-button{
-  margin-left: 20px;
-   color:white;
-}
-
 #about{
   font-size: 20px;
   margin: 100px;

@@ -7,17 +7,20 @@
 </template>
 
 <script>
-export default {
-  data(){
-    name: 'footer'
-  }
-}
+
 </script>
 
 <style lang="css" scoped>
-  #footer-main{
-    background-color: black;
-    height:10vh;
+
+  .entete{
+    position: absolute;
+    bottom:0;
+    left:50%;
+    background-color: lightgrey;
+    transform: translateX(-50%);
+    width: 100%;
+    height:70px;
+    padding: 10px;
   }
   p{
    text-align: center;

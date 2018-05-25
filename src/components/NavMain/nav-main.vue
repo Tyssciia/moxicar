@@ -1,16 +1,20 @@
 <template>
    <div>
-       <nav id="nav-main">
-        <img class="logo" src="../../assets/img/moxicar_png.png" alt="logo MoxiCar">
-       <ul class="navi">
-        <router-link :to="{name :'Home'}">
-        </router-link>
-       <router-link v-for="(page,nth) in page" :key="nth" :to="{ name: page }" tag="li"
-       class="item" active-class="is-active" exact>
-        <span>{{ page }}</span>
+       <img class="logo" src="../../assets/img/moxicar_png.png" alt="logo MoxiCar">
+     <div id="nav-main" class="ui secondary menu">
+       <router-link :to="{name :'Home'}">
        </router-link>
-     </ul>
-    </nav>
+      <router-link v-for="(page,nth) in page" :key="nth" :to="{ name: page }" tag="li"
+      class="item" active-class="is-active" exact>
+       <span>{{ page }}</span>
+      </router-link>
+  <div class="right menu">
+    <div class="item">
+    </div>
+    <a class="ui item">Déconnexion </a>
+  </div>
+</div>
+
    </div>
 </template>
 
@@ -22,10 +26,11 @@ export default {
       page:[
         "Home",
         "Login",
+        "Inscription",
         "Trajet",
-        "Profil"
-        // "Inscription"
+        "Profil",
 
+        // "Inscription"
       ]
     }
   },
@@ -43,35 +48,25 @@ export default {
 
   .logo{
     float:left;
-    height: 45px;
+    height: 35px;
     margin-top: 3px;
   }
 
   #nav-main{
     border-bottom : 1px solid lightblue;
   }
-  .navi{
-    color:Dimgrey;
-    font-weight: bolder;
-    font-size: 15px;
-    height:20px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: flex-end;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    cursor: pointer;
-    list-style: none;
- }
+
 
  li {
-   margin: 15px;
+    border-bottom: 1px solid red;
+    display:none;
+
  }
 
   li:hover{
-   height:30px;
-   background-color: #3d758e;
-   border:2px solid #3d758e;
-   color: white;
+    border-bottom: 1px solid red ;
+    cursor:pointer;
+
 
  }
 
